@@ -1,4 +1,4 @@
-**🧠 Enterprise ATS – AI-Powered Resume Screening System**
+**🧠 ATS – AI-Powered Resume Screening System**
 
 An AI-enabled Applicant Tracking System (ATS) built with Streamlit, designed to automate resume screening, skill matching, and recruitment pipeline management.
 
