@@ -1,0 +1,6 @@
+| Role          | Email                                                 | Password |
+| ------------- | ----------------------------------------------------- | -------- |
+| Admin         | [admin@company.com](mailto:admin@company.com)         | admin123 |
+| HR            | [hr@company.com](mailto:hr@company.com)               | hr123    |
+| Recruiter     | [recruiter@company.com](mailto:recruiter@company.com) | rec123   |
+| Client (Demo) | [demo@client.com](mailto:demo@client.com)             | demo     |
