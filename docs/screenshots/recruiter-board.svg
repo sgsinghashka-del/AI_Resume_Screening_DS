@@ -1,0 +1,57 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E0F2FE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect x="50" y="38" width="1180" height="82" rx="18" fill="#0F172A"/>
+  <text x="90" y="90" font-size="30" font-family="Segoe UI, Arial, sans-serif" fill="#FFFFFF" font-weight="700">Recruiter Board</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="58" y="150" width="1164" height="500" rx="24" fill="#FFFFFF"/>
+    <g fill="#334155">
+      <text x="95" y="200" font-size="18" font-weight="700">Candidate</text>
+      <text x="345" y="200" font-size="18" font-weight="700">Role</text>
+      <text x="585" y="200" font-size="18" font-weight="700">Score</text>
+      <text x="760" y="200" font-size="18" font-weight="700">Stage</text>
+      <text x="975" y="200" font-size="18" font-weight="700">Interview</text>
+    </g>
+
+    <line x1="90" y1="220" x2="1170" y2="220" stroke="#E2E8F0" stroke-width="2"/>
+
+    <g fill="#0F172A">
+      <text x="95" y="265" font-size="18">Aisha Khan</text>
+      <text x="345" y="265" font-size="18">Data Scientist</text>
+      <text x="585" y="265" font-size="18">86%</text>
+      <text x="760" y="265" font-size="18">Shortlisted</text>
+      <text x="975" y="265" font-size="18">Yes</text>
+    </g>
+    <g fill="#475569">
+      <text x="95" y="325" font-size="18">Rohan Mehta</text>
+      <text x="345" y="325" font-size="18">Backend Engineer</text>
+      <text x="585" y="325" font-size="18">92%</text>
+      <text x="760" y="325" font-size="18">Offer</text>
+      <text x="975" y="325" font-size="18">Yes</text>
+    </g>
+    <g fill="#0F172A">
+      <text x="95" y="385" font-size="18">Maya Shah</text>
+      <text x="345" y="385" font-size="18">HR Specialist</text>
+      <text x="585" y="385" font-size="18">63%</text>
+      <text x="760" y="385" font-size="18">Interview</text>
+      <text x="975" y="385" font-size="18">No</text>
+    </g>
+    <g fill="#475569">
+      <text x="95" y="445" font-size="18">David Lee</text>
+      <text x="345" y="445" font-size="18">Frontend Engineer</text>
+      <text x="585" y="445" font-size="18">58%</text>
+      <text x="760" y="445" font-size="18">Applied</text>
+      <text x="975" y="445" font-size="18">No</text>
+    </g>
+
+    <rect x="90" y="500" width="210" height="54" rx="12" fill="#4F46E5"/>
+    <text x="170" y="535" text-anchor="middle" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#FFFFFF" font-weight="700">Review</text>
+  </g>
+</svg>
+

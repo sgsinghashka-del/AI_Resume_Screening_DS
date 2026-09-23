@@ -1,0 +1,53 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#EEF2FF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="nav" x1="0" x2="1">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect x="35" y="24" width="1210" height="78" rx="20" fill="url(#nav)"/>
+  <text x="90" y="72" font-size="30" font-family="Segoe UI, Arial, sans-serif" fill="#FFFFFF" font-weight="700">Enterprise ATS Platform</text>
+
+  <g>
+    <rect x="90" y="140" width="180" height="102" rx="18" fill="#FFFFFF"/>
+    <text x="110" y="176" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#475569">Total</text>
+    <text x="110" y="214" font-size="34" font-family="Segoe UI, Arial, sans-serif" fill="#111827" font-weight="700">128</text>
+
+    <rect x="310" y="140" width="180" height="102" rx="18" fill="#FFFFFF"/>
+    <text x="330" y="176" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#475569">Avg Match %</text>
+    <text x="330" y="214" font-size="34" font-family="Segoe UI, Arial, sans-serif" fill="#111827" font-weight="700">79.4</text>
+
+    <rect x="530" y="140" width="180" height="102" rx="18" fill="#FFFFFF"/>
+    <text x="550" y="176" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#475569">Interviews</text>
+    <text x="550" y="214" font-size="34" font-family="Segoe UI, Arial, sans-serif" fill="#111827" font-weight="700">18</text>
+  </g>
+
+  <rect x="90" y="288" width="1080" height="360" rx="22" fill="#FFFFFF"/>
+  <text x="120" y="332" font-size="28" font-family="Segoe UI, Arial, sans-serif" fill="#0F172A" font-weight="700">Recent Candidates</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif" fill="#334155">
+    <rect x="120" y="360" width="1020" height="52" rx="12" fill="#F8FAFC"/>
+    <text x="150" y="392" font-size="18" font-weight="600">Aisha Khan</text>
+    <text x="410" y="392" font-size="18">Data Scientist</text>
+    <text x="690" y="392" font-size="18">86%</text>
+    <text x="860" y="392" font-size="18">Shortlisted</text>
+
+    <rect x="120" y="420" width="1020" height="52" rx="12" fill="#FFFFFF"/>
+    <text x="150" y="452" font-size="18" font-weight="600">Rohan Mehta</text>
+    <text x="410" y="452" font-size="18">Backend Engineer</text>
+    <text x="690" y="452" font-size="18">92%</text>
+    <text x="860" y="452" font-size="18">Offer</text>
+
+    <rect x="120" y="480" width="1020" height="52" rx="12" fill="#F8FAFC"/>
+    <text x="150" y="512" font-size="18" font-weight="600">Maya Shah</text>
+    <text x="410" y="512" font-size="18">HR Specialist</text>
+    <text x="690" y="512" font-size="18">63%</text>
+    <text x="860" y="512" font-size="18">Interview</text>
+  </g>
+</svg>
+
