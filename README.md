@@ -1,179 +1,247 @@
-# AI Resume Screening & ATS Dashboard
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Streamlit-1.32%2B-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit" />
-  <img src="https://img.shields.io/badge/spaCy-NLP-09A3D5?style=for-the-badge&logo=spacy&logoColor=white" alt="spacy" />
-  <img src="https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License" />
+# 🧠 AI Resume Screening & ATS Dashboard
+
+### A visual, NLP-powered applicant tracking system for faster and more structured hiring decisions.
+
+<p>
+  <a href="https://github.com/sgsinghashka-del/AI_Resume_Screening_DS"><img src="https://img.shields.io/badge/Repository-GitHub-181717?style=flat-square&logo=github" alt="GitHub repository" /></a>
+  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.10+" />
+  <img src="https://img.shields.io/badge/Streamlit-App-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit" />
+  <img src="https://img.shields.io/badge/spaCy-NLP-09A3D5?style=flat-square" alt="spaCy NLP" />
+  <img src="https://img.shields.io/badge/SQLite-Data%20Store-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
+  <img src="https://img.shields.io/badge/License-MIT-22C55E?style=flat-square" alt="MIT License" />
 </p>
 
-<p align="center">
-  <img src="./docs/screenshots/login-screen.svg" alt="AI Resume Screening Login Screen" width="100%" />
+<p>
+  <a href="#-quick-start">Quick Start</a> ·
+  <a href="#-product-tour">Product Tour</a> ·
+  <a href="#-how-it-works">How It Works</a> ·
+  <a href="#-roadmap">Roadmap</a>
 </p>
 
-## Overview
+<br />
 
-This project is an AI-powered Applicant Tracking System (ATS) built with Python and Streamlit. It helps recruiters screen resumes, score candidates against job requirements, and manage applicants through a lightweight hiring pipeline.
+<img src="./docs/screenshots/dashboard.svg" alt="AI Resume Screening dashboard preview" width="92%" />
 
-The system combines resume parsing, skill extraction, SQL-based data storage, and a recruiter-friendly dashboard to simulate a practical hiring workflow.
+</div>
 
-## Why this project?
+---
 
-Recruitment teams often deal with large volumes of resumes, making manual screening slow and inconsistent. This ATS prototype demonstrates how NLP and structured data pipelines can:
+## ✨ Project Snapshot
 
-- extract candidate skills from resumes
-- match them against target job roles
-- identify candidates with strong fit
-- track applicants through hiring stages
-- support compliance and audit visibility
+**AI Resume Screening & ATS Dashboard** is a Streamlit-based recruitment workspace that turns unstructured resumes into actionable candidate insights.
 
-## Key Features
+Recruiters can upload PDF or DOCX resumes, extract relevant skills with spaCy, compare candidates against role requirements, calculate a match score, and move applicants through a visual hiring pipeline—all backed by a lightweight SQLite database.
 
-- Role-based login for Admin, HR, Recruiter, and Client
-- Resume upload support for PDF and DOCX
-- NLP-based skill extraction using spaCy
-- Match score calculation against selected role requirements
-- Candidate tracking through stages: Applied → Shortlisted → Interview → Offer
-- Lightweight SQLite database for persistence
-- Compliance and bias-risk review view
-- Shortlist export workflow
+> **Built as a practical MVP:** simple to run locally, easy to understand, and ready to evolve into a production-grade recruitment platform.
 
-## Screenshots
+## 🎯 What It Solves
 
-### Login Screen
+Manual resume screening is repetitive, difficult to scale, and often inconsistent. This project demonstrates a structured workflow for:
+
+- reducing the time spent reviewing resumes
+- standardizing first-pass skill matching
+- giving recruiters a single view of candidate progress
+- making screening outcomes easier to inspect and compare
+- creating a foundation for analytics and intelligent hiring tools
+
+## 🚀 Core Capabilities
+
+| Capability | Description |
+| --- | --- |
+| 🔐 Role-based access | Demo login flows for Admin, HR, Recruiter, and Client roles |
+| 📄 Resume ingestion | Upload PDF and DOCX resumes directly from the app |
+| 🧠 Skill extraction | Identify role-relevant skills with spaCy and rule-based matching |
+| 📊 Match scoring | Compare detected skills with requirements for the selected role |
+| 🗂️ Hiring pipeline | Move candidates through Applied, Shortlisted, Interview, and Offer stages |
+| 📋 Recruiter board | Review stored candidates and their screening information |
+| ⚖️ Compliance view | Surface a simple bias-risk review based on match scores |
+| 💾 Persistent storage | Save candidate records in SQLite |
+| 📤 Shortlist workflow | Support downloads for candidates marked for interview |
+
+## 🖥️ Product Tour
+
+### 1. Secure entry point
 
 <p align="center">
-  <img src="./docs/screenshots/login-screen.svg" alt="ATS login screen" width="900" />
+  <img src="./docs/screenshots/login-screen.svg" alt="Enterprise ATS login screen" width="88%" />
 </p>
 
-### Dashboard & Insights
+A clean login experience provides separate demo access paths for the major recruitment stakeholders.
+
+### 2. Decision-ready dashboard
 
 <p align="center">
-  <img src="./docs/screenshots/dashboard.svg" alt="ATS dashboard" width="900" />
+  <img src="./docs/screenshots/dashboard.svg" alt="ATS dashboard with candidate metrics" width="88%" />
 </p>
 
-### Recruiter Board
+The dashboard provides a quick view of application volume, average matching performance, and interview activity.
+
+### 3. Recruiter workspace
 
 <p align="center">
-  <img src="./docs/screenshots/recruiter-board.svg" alt="ATS recruiter board" width="900" />
+  <img src="./docs/screenshots/recruiter-board.svg" alt="ATS recruiter board with candidate statuses" width="88%" />
 </p>
 
-## Architecture
+The recruiter board brings candidate roles, scores, stages, and interview status into one reviewable workspace.
+
+> The visuals above are repository-hosted SVG product mockups that document the intended experience. Run the application locally to interact with the live Streamlit interface.
+
+## 🧩 How It Works
 
 ```mermaid
 flowchart LR
-    A[Candidate Uploads Resume] --> B[Streamlit UI]
-    B --> C[Python Backend]
-    C --> D[Resume Parser]
-    D --> E[spaCy NLP Skill Extraction]
-    E --> F[Role Match Engine]
-    F --> G[SQLite Database]
-    G --> H[Dashboard / Recruiter Board / Audit Screen]
+    A[Upload PDF / DOCX] --> B[Extract Resume Text]
+    B --> C[spaCy NLP Processing]
+    C --> D[Detect Relevant Skills]
+    D --> E[Compare With Role Requirements]
+    E --> F[Calculate Match Score]
+    F --> G[(SQLite Candidate Record)]
+    G --> H[Dashboard & Recruiter Pipeline]
 ```
 
-## Tech Stack
+### Match-score formula
 
-| Layer | Technology |
+```text
+Match Score = (Matched Required Skills / Total Required Skills) × 100
+```
+
+Supported role profiles currently include Backend Engineer, Frontend Engineer, DevOps Engineer, Data Scientist, HR Specialist, and Sales Executive.
+
+## 🛠️ Technology Stack
+
+| Layer | Tools |
 | --- | --- |
-| Frontend | Streamlit |
-| Backend | Python |
-| NLP | spaCy |
-| Data Storage | SQLite |
-| Resume Parsing | PyPDF2, python-docx |
-| Deployment | Local / Docker-ready |
+| Interface | Streamlit |
+| Application logic | Python |
+| Natural language processing | spaCy (`en_core_web_sm`) |
+| Resume parsing | PyPDF2, python-docx |
+| Persistence | SQLite, pandas |
+| Optional API utility | FastAPI (`backend.py`) |
 
-## Project Structure
+## 📁 Repository Layout
 
 ```text
 AI_Resume_Screening_DS/
-├── app.py                 # Main Streamlit application
-├── backend.py            # FastAPI resume parsing utility
-├── ats.db                # SQLite database
-���── requirements.txt      # Python dependencies
+├── app.py                       # Main Streamlit application
+├── backend.py                   # FastAPI resume parsing utility
+├── ats.db                      # SQLite database used by the app
+├── requirements.txt            # Python dependencies
 ├── docs/
-│   └── screenshots/
+│   └── screenshots/            # README product visuals
 │       ├── login-screen.svg
 │       ├── dashboard.svg
 │       └── recruiter-board.svg
-├── README.md             # Project documentation
-└── .gitignore            # Git ignore rules
+└── README.md                   # Project documentation
 ```
 
-## Installation
+## ⚡ Quick Start
 
-### 1) Clone the repository
+### Prerequisites
+
+- Python 3.10 or newer
+- pip
+- A virtual environment is recommended
+
+### Installation
 
 ```bash
 git clone https://github.com/sgsinghashka-del/AI_Resume_Screening_DS.git
 cd AI_Resume_Screening_DS
-```
 
-### 2) Create and activate a virtual environment
+python -m venv .venv
 
-```bash
-python -m venv venv
-# Windows
-venv\Scripts\activate
 # macOS/Linux
-source venv/bin/activate
-```
+source .venv/bin/activate
 
-### 3) Install dependencies
+# Windows PowerShell
+# .venv\Scripts\Activate.ps1
 
-```bash
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 ```
 
-### 4) Run the app
+### Launch
 
 ```bash
 streamlit run app.py
 ```
 
-Open your browser at:
+Then open [http://localhost:8501](http://localhost:8501).
 
-```text
-http://localhost:8501
-```
+## 🔑 Demo Access
 
-## Demo Credentials
+> These credentials are for local demonstration only. Do not use them in a production deployment.
 
 | Role | Email | Password |
 | --- | --- | --- |
-| Admin | admin@company.com | admin123 |
-| HR | hr@company.com | hr123 |
-| Recruiter | recruiter@company.com | rec123 |
-| Client | demo@client.com | demo |
+| Admin | `admin@company.com` | `admin123` |
+| HR | `hr@company.com` | `hr123` |
+| Recruiter | `recruiter@company.com` | `rec123` |
+| Client | `demo@client.com` | `demo` |
 
-## How Match Scoring Works
+## 🧪 Typical Workflow
 
-1. A candidate resume is uploaded in PDF or DOCX format.
-2. The text is extracted and cleaned.
-3. spaCy processes the resume text and identifies relevant skills.
-4. The system compares discovered skills with the selected role requirements.
-5. A percentage match is calculated and displayed.
-6. The candidate is placed into the relevant hiring stage.
+1. Sign in with one of the demo accounts.
+2. Open **Resume Processing**.
+3. Enter the candidate name and select a target role.
+4. Upload a PDF or DOCX resume.
+5. Review extracted skills and the calculated match score.
+6. Save the candidate to the database.
+7. Track progress from the **Recruiter Board** or **Interview Pipeline**.
+8. Review candidates in **Compliance Audit** and export interview shortlists.
 
-## Future Enhancements
+## 🔒 Important Security Notes
 
-- OAuth / SSO authentication
-- Advanced analytics dashboards
-- LLM-based resume understanding
-- Automated interview scoring
-- Cloud deployment (AWS, Azure, GCP)
-- Multi-tenant hiring support
+This repository is a demonstration MVP. Before production use, consider:
 
-## Author
+- replacing hard-coded demo credentials with secure authentication
+- using a password-hashing library such as Argon2 or bcrypt
+- adding authorization checks for every role and action
+- validating uploaded file size, type, and content
+- storing resumes outside the repository and protecting personal data
+- adding audit logs, encryption, retention policies, and consent controls
+- testing skill extraction for fairness, accuracy, and bias
 
-Ashka Singh
+## 🗺️ Roadmap
 
-## License
+- [ ] OAuth / SSO authentication
+- [ ] Production-grade RBAC and secret management
+- [ ] Candidate search, filtering, and pagination
+- [ ] Rich analytics and hiring funnel visualizations
+- [ ] LLM-assisted resume understanding with explainable results
+- [ ] Interview scheduling and evaluation forms
+- [ ] Automated tests and CI/CD
+- [ ] Docker and cloud deployment for AWS, Azure, or GCP
+- [ ] Multi-tenant organization support
 
-This project is licensed under the MIT License.
+## 🤝 Contributing
 
-<p align="center">
-  <sub>Built for AI-powered recruitment and resume screening workflows.</sub>
-</p>
+Ideas, improvements, and bug reports are welcome. A typical contribution flow is:
 
+```bash
+git checkout -b feature/your-improvement
+# make your changes
+git add .
+git commit -m "Describe your improvement"
+git push origin feature/your-improvement
+```
+
+Then open a pull request with a short explanation and screenshots for UI changes.
+
+## 👩‍💻 Author
+
+**Ashka Singh**
+
+## 📄 License
+
+This project is available under the [MIT License](LICENSE).
+
+<div align="center">
+
+### ⭐ If this project helped you, consider starring the repository.
+
+<sub>AI-assisted recruitment workflows, designed for clarity and extensibility.</sub>
+
+</div>
